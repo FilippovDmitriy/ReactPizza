@@ -1,0 +1,175 @@
+@import '../../scss/variables';
+
+.cart {
+  max-width: 827px;
+  margin: 0 auto;
+  section.topContent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @media (max-width: $md5) {
+      flex-direction: column;
+    }
+    .cartItem {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 17px;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 39px;
+        letter-spacing: 0.01em;
+        color: #000000;
+      }
+    }
+    .clearItem {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      @media (max-width: $md5) {
+        margin-top: 20px;
+      }
+      svg {
+        path {
+          transition: $duration;
+        }
+      }
+      span {
+        transition: $duration;
+        margin-left: 7px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #B6B6B6;
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: darken($color: #b6b6b6, $amount: 50);
+          }
+        }
+        span {
+          color: darken($color: #b6b6b6, $amount: 50);
+        }
+      }
+    }
+  }
+  section.mainContent {
+    margin-bottom: 40px;
+  }
+  section.bottomContent {
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      font-size: 22px;
+      line-height: 27px;
+      letter-spacing: 0.01em;
+      color: #000000;
+      @media (max-width: $md4) {
+        flex-direction: column;
+      }
+      .pizzaCount {
+        @media (max-width: $md4) {
+          margin-bottom: 10px;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+      .pizzaTotalPrice {
+        span {
+          font-weight: bold;
+          color: $orange;
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $md4) {
+        flex-direction: column;
+      }
+      button+button {
+        @media (max-width: $md4) {
+          margin-top: 15px;
+        }
+      }
+      button {
+        padding: 16px 0;
+        width: 211px;
+        svg {
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+.voidCart {
+  max-width: 827px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    position: relative;
+    margin-bottom: 10px;
+    @media (max-width: $md4) {
+      line-height: 26px;
+      font-size: 26px;
+    }
+    &:after {
+      content: '';
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      right: -42px;
+      top: 7%;
+      background-size: cover;
+      background-image: url("../../assets/images/Cart/emoji.png");
+      @media (max-width: $md4) {
+        top: 5%;
+        width: 26px;
+        height: 26px;
+        right: -30px;
+      }
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 145.4%;
+    letter-spacing: 0.01em;
+    color: #777777;
+    margin-bottom: 47px;
+    @media (max-width: $md4) {
+      font-size: 16px;
+    }
+    @media (max-width: $md5) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
+    @media (max-width: 360px) {
+      font-size: 10px;
+    }
+  }
+  img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 74px;
+    @media (max-width: 400px) {
+      width: 200px;
+      height: 185px;
+    }
+  }
+  button {
+    padding: 14px 0 17px;
+    width: 210px;
+  }
+}

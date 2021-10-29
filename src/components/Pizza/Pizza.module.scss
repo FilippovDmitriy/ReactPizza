@@ -1,0 +1,32 @@
+@import "src/scss/variables";
+
+.pizza {
+  h2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    margin-bottom: 35px;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 65px;
+    @media (max-width: $md1) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $md2) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $md3) {
+      grid-row-gap: 50px;
+      grid-column-gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $md4) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

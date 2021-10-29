@@ -1,0 +1,100 @@
+@import '../../scss/variables';
+
+.button {
+  transition: $duration;
+  background: $orange;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  &:hover {
+    background-color: darken($orange, 8%);
+  }
+  svg {
+    circle, path {
+      transition: $duration;
+    }
+  }
+}
+.outline {
+  background: #FFFFFF;
+  border: 1px solid #EB5A1E;
+  color: $orange;
+  &:hover {
+    color: #FFFFFF;
+    background-color: $orange;
+    path {
+      transition: $duration;
+      fill: #FFFFFF;
+    }
+  }
+}
+.back {
+  background: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  color: #CACACA;
+  a {
+    transition: $duration;
+    color: #CACACA;
+  }
+  svg {
+    path {
+      transition: $duration;
+    }
+  }
+  &:hover {
+    background: #CACACA;
+    color: #FFFFFF;
+    a {
+      color: #FFFFFF;
+    }
+    svg {
+      path {
+        stroke: #FFFFFF;
+        fill: #CACACA;
+      }
+    }
+  }
+}
+.black {
+  background: #282828;
+  color: #FFFFFF;
+  a {
+    color: #FFFFFF;
+  }
+  &:hover,
+  &:active {
+    background-color: lighten($color: #282828, $amount: 10);
+  }
+}
+.counter {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  &:hover {
+    circle {
+      transition: $duration;
+      fill: $orange;
+    }
+    path {
+      transition: $duration;
+      fill: #FFFFFF;
+    }
+  }
+}
+.close {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  &:hover {
+    background-color: #D7D7D7;
+    circle {
+      fill: #D7D7D7;
+    }
+    path {
+      fill: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../scss/variables";
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  position: relative;
+  @media (max-width: $md1) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #F4F4F4;
+  }
+  .cartPizzaItem {
+    display: flex;
+    width: 375px;
+    align-items: center;
+    @media (max-width: $md5) {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    img {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+    }
+    div {
+      h4 {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: 0.01em;
+        color: #000000;
+      }
+      span {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: #8D8D8D;
+      }
+    }
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+    margin-left: 68px;
+    @media (max-width: $md1) {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+    span {
+      margin-right: 12px;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      letter-spacing: 0.01em;
+      color: #000000;
+      margin-left: 12px;
+    }
+  }
+  .price {
+    margin-left: auto;
+    margin-right: 91px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    @media (max-width: $md1) {
+      margin-top: 30px;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+}

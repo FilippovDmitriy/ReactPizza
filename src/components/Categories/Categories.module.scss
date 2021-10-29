@@ -1,0 +1,58 @@
+@import '../../scss/variables';
+
+.categories {
+  ul {
+    display: flex;
+    @media (max-width: $md1) {
+      position: absolute;
+      left: -130%;
+      margin-top: 10px;
+      padding: 15px;
+      width: 30vw;
+      background-color: #D9D9D9;
+      flex-direction: column;
+      &.active {
+        transition: .5s;
+        left: 6%;
+      }
+    }
+    @media (max-width: $md2) {
+      width: 300px;
+    }
+    @media (max-width: $md5) {
+      width: 280px;
+    }
+    li {
+      transition: $duration;
+      user-select: none;
+      padding: 14px 30px;
+      cursor: pointer;
+      background: #F9F9F9;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.015em;
+      color: #2C2C2C;
+      &:hover {
+        background-color: darken(#f9f9f9, 2%);
+      }
+      &:active {
+        background-color: darken(#f9f9f9, 5%);
+      }
+    }
+    li + li {
+      margin-left: 9px;
+      @media (max-width: $md1) {
+        margin-left: 0;
+        margin-top: 9px;
+      }
+    }
+    li.active {
+      transition: $duration;
+      background: #282828;
+      color: #FFFFFF;
+    }
+  }
+}

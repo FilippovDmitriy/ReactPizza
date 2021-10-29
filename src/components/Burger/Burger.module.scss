@@ -1,0 +1,33 @@
+@import "src/scss/variables";
+
+.burger {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  background-color: $orange;
+  span {
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+    &:before {
+      top: 7px;
+    }
+    &:after {
+      bottom: 7px;
+    }
+  }
+}
